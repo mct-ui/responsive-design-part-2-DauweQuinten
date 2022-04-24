@@ -218,7 +218,13 @@ a:focus {
     background-color: #F7F7F7;
 }
 
-/*
+.o-row--gradient{
+    background: linear-gradient(45deg, #5051DB, #3887F7);
+    color: white;
+}
+
+
+/*  
     Objects: Container
     ---
     Creates a horizontal container that sets de global max-width
@@ -595,7 +601,7 @@ a:focus {
     background-color: #7373F5;
     transform: scaleX(.5);
     transform-origin: left;
-    transition-property: transform background-color;
+    transition-property: transform, background-color;
     transition-duration: .175s;
     transition-timing-function: ease-in;
 }
@@ -606,10 +612,22 @@ a:focus {
 
 .c-link-cta:hover::after {
     transform: scaleX(1);
-    color: #3E3EA8;
+    background-color: #3E3EA8;
 }
 
+.c-link-cta--inverse,
+.c-link-cta--inverse:visited,
+.c-link-cta--inverse:active{
+    color: #FFF
+}
 
+.c-link-cta--inverse::after{
+    background-color: #FFF;
+}
+
+.c-link-cta--inverse:hover::after{
+    background-color: #FFF;
+}
 
 /*------------------------------------*\
   #UTILITIES
